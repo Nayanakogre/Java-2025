@@ -1,0 +1,296 @@
+															
+					SECTION-A
+
+
+1
+a)primitive data type
+* primitive datatype are built in data types
+*There are 8 datatypes in primitive datatypes
+
+1.byte :it will store integer kind values the from the range of -128 to 127.The default value is int means 0.
+ 
+2.short: it will also store the integer values from the range -32,768 to 32,767.The default value is int is 0.
+
+3.int :It will store integer values from the range -2^31 to 2^31-1 .The default value is int is 0.
+
+4.long :It will store integer values from the range -2^63 to 2^63-1.the default value for long is int means of 0l.
+
+5.float:It will store decimal value its a single precision 4 byte datatype. The default value 0.0f it returns double as default .
+
+6.double:It will store decimal value its a two precision 8 byte datatype. The default value 0.0 it returns double as default .
+
+7.char :It will store single character the range start from -65,636 to 65,635 .Value should be written within single quotes.
+  The default value for char is '/u0000'.
+
+8.boolean:It will store either true or false. The default value for boolean is false.
+
+we can divide these into again 4 types for our reference of understanding
+1.Numeric datatype: It will store only numbers [byte, short, int, long].
+
+2.Decimal datatypes: It will store decimal values[float, double].
+
+3.character variable: It will store single character for example 'a'[char].
+
+4.Accepts only two conditions :It will store either true or false [boolean].
+
+b)
+Reference datatype are also called as non-primitive or custom data types.
+These are user defined datatypes.
+Reference data type contain infinite number of variables
+
+for example: String, array, classes, enum ,interface etc
+
+2)
+* The local variable is method variable  whereas instance variable is class variable
+
+*The local variable are declared inside the method whereas instance variable declared inside the class outside the methos
+
+*In local variable declaration and initialization done at same time whereas in instance variable declaration is enough wherever you want initialize its
+completely a user choice
+
+*Memory allocation for local variable assigned during runtime whereas in instance variable memory allocation allocated during compile time.
+
+*The scope of local variable is inside methos whereas the scope of instance variable is inside class. 
+
+*local variable does not use static keyword whereas instance variable static keyword while declaration.
+
+*Example for local variable
+public static void main(String args[])
+{
+int a=10;
+String name="Nayana";
+}
+
+
+*Example for Instance variable
+public class Test
+{
+static int a;
+static String name="nayana";
+}
+
+3)Syntax for user defined method
+
+access-specifier non-acces specifier return type method-name(Parameters)
+{
+}
+
+Example:
+
+public static void isworking()
+{
+ boolean isCycleWorking=true;
+system.out.println(isCycleWorking);
+}
+   
+
+4)Access specifiers are the keywords they provide access rules for class variables methods constructer etc.
+
+The Four types of access specifiers are
+1.public
+2.private
+3.protected
+4.pacakge - default
+
+public----this access specifier can be used anywhere by anyone
+
+private---this access specifier only used within the class
+
+protected---this is used only by the child class
+
+package -default--this used inside the package only.
+
+5)The purpose of static keyword is provide a single allocation of memory.
+
+when come to variables and methods declared using static keyword the memory allocates during the compile time.
+
+6)The difference between method with return type and void method is as follows
+
+* A method with return type returns respective type of data provided according to the datatype provided during method creation
+for ex:
+public static int add(int a, int b)
+{
+int a=10;
+int b=20;
+int c=a+b;
+return c;
+}
+
+whereas method with void will return nothing
+there is no need of use return keyword its optional
+return means end.
+
+7)Difference between if else and switch statements is as follows
+* in if - else condition when the condition is true then only if will work or it will excute the else part where as switch will execute 
+without considering true or false condition.
+* uses if and else keywords in if-else conditions whereas in switch condition switch keyword is used.
+
+*when conditions were clear at that time switch is preferable whereas when conditions are not clear where if-else is preferable.
+
+
+
+							SECTION -B
+1)
+public class MathOperation1
+{
+public static int add(int a,int b)
+{
+int sum=a+b;
+return sum;
+}
+public static void main(String args[])
+{
+int sum=MathOperation1.add(10,20);
+System.out.println(sum);
+}
+}
+
+2)
+
+public class OddEven
+{
+public static void main(String args[])
+{
+boolean check=OddEven.checkoddeven(10);
+System.out.println(check);
+}
+
+public static boolean checkoddeven(int number)
+{
+if(number%2==0)
+{
+
+return true;
+} 
+else
+{
+return false;
+}
+}
+}
+
+3)
+
+public class Test
+{
+static int count=0;
+public static int incrementCount()
+{
+count++;
+return count;
+}
+
+public static void main(String args[])
+{
+int count1=Test.incrementCount();
+System.out.println(count1);
+int count2=Test.incrementCount();
+System.out.println(count2);
+int count3=Test.incrementCount();
+System.out.println(count3);
+}
+}
+
+4)
+
+public class Grade
+{
+public static char calculateGrade(int grade)
+
+{
+if(grade>=90 && grade<=100)
+{
+return 'A';
+}
+else if(grade>=80 && grade<=89)
+{
+return 'B';
+}
+else if(grade>=70 && grade<=79)
+{
+return 'C';
+}
+else if(grade>=60 && grade<=69)
+{
+return 'D';
+}
+else
+{
+return 'F';
+}
+}
+
+public static void main(String args[])
+{
+char grade=Grade.calculateGrade(90);
+System.out.println(grade);
+}
+}
+
+5)
+public class Conditional
+{
+	public static void main(String args[])
+	{
+		int count=7;
+		if(count>=1 && count<=7)
+			{
+				System.out.println("Valid input preced");
+			}
+			else{
+				System.out.println("Invalid input");
+			}
+				
+		switch(count)
+		{
+			
+				case 1:
+				count=1;
+				System.out.println("Sunday");
+				break;
+				case 2:
+				count=2;
+				System.out.println("Monday");
+				break;
+				case 3:
+				count=3;
+				System.out.println("Tuesday");
+				break;
+				case 4:
+				count=4;
+				System.out.println("Wednsday");
+				break;
+				case 5:
+				count=5;
+				System.out.println("Thursday");
+				break;
+				case 6:
+				count=6;
+				System.out.println("Friday");
+				break;
+				case 7:
+				count=7;
+				System.out.println("Saturday");
+				break;
+				default:
+				System.out.println("Invalid day");
+			}
+			
+		}
+	}
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
