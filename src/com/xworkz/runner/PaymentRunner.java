@@ -20,8 +20,5 @@ public class PaymentRunner {
         Payment.payment(8653422l,"25-06-24");
         Payment.payment(900.0,89);
 
-
-
-
     }
 }
