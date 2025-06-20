@@ -1,0 +1,5 @@
+servlet-->javax-->for till java 8 --->3.1.0
+above 8--->jakrta
+for all java 8--->use below 6
+spring context
+spring web mvc
